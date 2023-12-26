@@ -1,0 +1,9 @@
+﻿@using P335_BackEnd.Entities
+@model List<Product>
+
+<ul class="list-group">
+    @foreach (var product in Model)
+    {
+        <li class="list-group-item"><a asp-controller="Shop" asp-action="ProductDetails" asp-route-id="@product.Id" style="text-decoration:none; color:black">@product.Name</a></li>
+    }
+</ul>
